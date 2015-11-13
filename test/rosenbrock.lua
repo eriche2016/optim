@@ -15,7 +15,7 @@ function rosenbrock(x)
    -- x1 =  x(i)^2
    local x1 = x.new(d-1):copy(x:narrow(1,1,d-1))
    -- x(i+1) - x(i)^2
-   x1:cmul(x1):mul(-1):add(x:narrow(1,2,d-1))
+   x1:cmul(x1):mul(-1):add(x:narrow(1,2,d))
 
    -- 100*(x(i+1) - x(i)^2)^2
    x1:cmul(x1):mul(100)
